@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnPressed(_ sender: UIButton) {
+        DownloadImage.fetchImage(urlStr: "https://sportshub.cbsistatic.com/i/2019/03/17/31182cfa-673f-4d22-8d9b-ed5a563b14b3/errol-spence.jpg") { image in
+            DispatchQueue.main.async {
+                self.imageView_1.image = image
+            }
+            
+        }
     }
     
     
