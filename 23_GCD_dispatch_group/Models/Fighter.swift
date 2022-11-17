@@ -10,5 +10,5 @@ import UIKit
 
 struct Fighter {
     var name:String
-    var imgUrl:UIImage?
+    var image:UIImage
 }
