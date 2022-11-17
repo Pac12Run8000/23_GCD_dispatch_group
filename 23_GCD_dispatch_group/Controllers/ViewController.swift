@@ -8,11 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView_1: UIImageView!
+    
+    @IBOutlet weak var imageView_2: UIImageView!
+    
+    @IBOutlet weak var imageView_3: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func btnPressed(_ sender: UIButton) {
+    }
+    
+    
 
 
 }
