@@ -19,11 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView_2: UIImageView!
     @IBOutlet weak var imageView_3: UIImageView!
     
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
+    
+    
     
     @IBAction func btnPressed(_ sender: UIButton) {
         dispatchGroup.enter()
@@ -64,8 +72,11 @@ class ViewController: UIViewController {
         
         dispatchGroup.notify(queue: .main) {
             self.imageView_1.image = self.errol?.image
+            self.label1.text = self.errol?.name
             self.imageView_2.image = self.frank?.image
+            self.label2.text = self.frank?.name
             self.imageView_3.image = self.xander?.image
+            self.label3.text = self.xander?.name
         }
     }
     
