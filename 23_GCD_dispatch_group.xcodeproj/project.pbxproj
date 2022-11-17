@@ -14,8 +14,6 @@
 		09FFEDCB292678F1002B0D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FFEDCA292678F1002B0D1B /* Assets.xcassets */; };
 		09FFEDCE292678F1002B0D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FFEDCC292678F1002B0D1B /* LaunchScreen.storyboard */; };
 		09FFEDDB29267C00002B0D1B /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFEDDA29267C00002B0D1B /* Fighter.swift */; };
-		09FFEDDE29267D11002B0D1B /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFEDDD29267D11002B0D1B /* NetworkingService.swift */; };
-		09FFEDE029267FCC002B0D1B /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFEDDF29267FCC002B0D1B /* DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		09FFEDCD292678F1002B0D1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09FFEDCF292678F1002B0D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09FFEDDA29267C00002B0D1B /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
-		09FFEDDD29267D11002B0D1B /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
-		09FFEDDF29267FCC002B0D1B /* DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +58,6 @@
 		09FFEDC0292678EF002B0D1B /* 23_GCD_dispatch_group */ = {
 			isa = PBXGroup;
 			children = (
-				09FFEDDC29267CF4002B0D1B /* NetworkingService */,
 				09FFEDD729267BCF002B0D1B /* Models */,
 				09FFEDD629267B66002B0D1B /* Controllers */,
 				09FFEDD529267B56002B0D1B /* Views */,
@@ -97,15 +92,6 @@
 				09FFEDDA29267C00002B0D1B /* Fighter.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		09FFEDDC29267CF4002B0D1B /* NetworkingService */ = {
-			isa = PBXGroup;
-			children = (
-				09FFEDDD29267D11002B0D1B /* NetworkingService.swift */,
-				09FFEDDF29267FCC002B0D1B /* DownloadImage.swift */,
-			);
-			path = NetworkingService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +165,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FFEDDE29267D11002B0D1B /* NetworkingService.swift in Sources */,
-				09FFEDE029267FCC002B0D1B /* DownloadImage.swift in Sources */,
 				09FFEDC6292678EF002B0D1B /* ViewController.swift in Sources */,
 				09FFEDDB29267C00002B0D1B /* Fighter.swift in Sources */,
 				09FFEDC2292678EF002B0D1B /* AppDelegate.swift in Sources */,
