@@ -37,45 +37,43 @@ class ViewController: UIViewController {
         dispatchGroup.enter()
         DispatchQueue.global(qos: .userInteractive).async {
             guard let url = URL(string: "https://sportshub.cbsistatic.com/i/2019/03/17/31182cfa-673f-4d22-8d9b-ed5a563b14b3/errol-spence.jpg"), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
-                fatalError("Couldn't fetch image")
-                
+                fatalError("Could not get image")
             }
-            self.errol = Fighter(name: "Error Spence", image: image)
-            print("Done", self.errol)
+            self.errol = Fighter(name: "Errol The Truth Spence", image: image)
+            print("Done, \(String(describing: self.errol?.name))")
+            self.dispatchGroup.leave()
+        }
+        sleep(3)
+        
+        dispatchGroup.enter()
+        DispatchQueue.global(qos: .userInteractive).async {
+            guard let url = URL(string: "https://www.gannett-cdn.com/-mm-/7301cd4ac5f062de6947d15882ef17450914014f/c=0-0-2641-3521/local/-/media/2016/05/31/INGroup/Indianapolis/636003016676339424-GoldenGlove-05282016-20.jpg"), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
+                fatalError("Could not get image")
+            }
+            self.frank = Fighter(name: "Frank Martin", image: image)
+            print("Done, \(String(describing: self.frank?.name))")
             self.dispatchGroup.leave()
         }
         
-        sleep(3)
-        dispatchGroup.enter()
-        DispatchQueue.global(qos: .userInteractive).async {
-            guard let url = URL(string: "https://www.boxing247.com/wp-content/uploads/2022/01/Luis-Ortiz-vs-Charles-Martin-1.1.2022_Ryan-Hafey-_-Premier-Boxing-Champions13-Boxing-Photos.jpg"), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
-                fatalError("Couldn't fetch image")
-                
-            }
-            self.frank = Fighter(name: "Frank Martin", image: image)
-            print("Done", self.frank)
-            self.dispatchGroup.leave()
-        }
-       
-        sleep(3)
+//        sleep(3)
         dispatchGroup.enter()
         DispatchQueue.global(qos: .userInteractive).async {
             guard let url = URL(string: "https://www.toprank.com/wp-content/uploads/2021/05/Xander_Zayas_victory.jpg"), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
-                fatalError("Couldn't fetch image")
+                fatalError("Could not get image")
             }
             self.xander = Fighter(name: "Xander Zayas", image: image)
-            print("Done", self.xander)
+            print("Done, \(String(describing: self.xander?.name))")
             self.dispatchGroup.leave()
         }
         
-        
-        
+//        sleep(3)
         dispatchGroup.notify(queue: .main) {
             self.imageView_1.image = self.errol?.image
-            self.label1.text = self.errol?.name
             self.imageView_2.image = self.frank?.image
-            self.label2.text = self.frank?.name
             self.imageView_3.image = self.xander?.image
+            
+            self.label1.text = self.errol?.name
+            self.label2.text = self.frank?.name
             self.label3.text = self.xander?.name
         }
     }
